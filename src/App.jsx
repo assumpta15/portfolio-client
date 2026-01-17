@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/projects" element={<PublicProjects />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/messages" element={<AdminMessages />} />
+          
 
 
           
