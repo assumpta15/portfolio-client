@@ -1,7 +1,35 @@
+// import { useState } from "react";
+// //import api from "../utils/api";
+// import api from "../api/axios";
 
+// export default function Contact() {
+//   const [form, setForm] = useState({ name: "", email: "", message: "" });
+//   const [loading, setLoading] = useState(false);
+//   const [success, setSuccess] = useState("");
+//   const [error, setError] = useState("");
+
+//   const handleChange = (e) =>
+//     setForm({ ...form, [e.target.name]: e.target.value });
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setSuccess("");
+//     setError("");
+
+//     try {
+//       await api.post("/contact", form);
+//       setSuccess("✅ Email sent successfully. I’ll get back to you shortly.");
+//       setForm({ name: "", email: "", message: "" });
+//     } catch {
+//       setError("❌ Failed to send email. Please try again.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
 
 import { useState } from "react";
-import api from "../utils/api";
+import api from "../api/axios";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -9,9 +37,8 @@ export default function Contact() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  const handleChange = (e) =>
+     const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -19,7 +46,7 @@ export default function Contact() {
     setError("");
 
     try {
-      await api.post("/contact", form);
+      await api.post("/api/contact", form);
       setSuccess("✅ Email sent successfully. I’ll get back to you shortly.");
       setForm({ name: "", email: "", message: "" });
     } catch {
