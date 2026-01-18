@@ -427,7 +427,7 @@ export default function ProjectDetails() {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await api.get(`/projects/${id}`);
+        const res = await api.get(`/api/projects/${id}`);
         setProject(res.data.data);
       } catch (err) {
         console.error(err);
