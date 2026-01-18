@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-//import api from "../utils/api";
-import api from "../api/axios";
+import api from "../utils/api";
+
 
 export default function PublicProjects() {
   const [projects, setProjects] = useState([]);
